@@ -20,7 +20,7 @@ TEST(ConstructorTest, NoInputPerimeter){
 
 TEST(PerimeterTest, IntInputPerimeter){
     Rectangle* test = new Rectangle(2, 8);
-    EXPECT_EQ(test->perimeter, 20);
+    EXPECT_EQ(test->perimeter(), 20);
 }
 
 TEST(testingArea, IntInputArea){
