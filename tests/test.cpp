@@ -30,7 +30,7 @@ TEST(testingArea, IntInputArea){
 
 TEST(PerimeterTest, ZeroHeightPerimeter){
     Rectangle* test = new Rectangle(2, 0);
-    EXPECT_EQ(test->perimeter, 4);
+    EXPECT_EQ(test->perimeter(), 4);
 }
 
 int main(int argc, char **argv) {
