@@ -8,47 +8,29 @@ TEST(testingArea, AreaTestZeroWidth){
     EXPECT_EQ(test1->area(), 0);
 }
 
-TEST(RectangleTest, RectangleWidthNone){
+TEST(ConstructorTest, NoInputArea){
     Rectangle* test = new Rectangle();
-    EXPECT_EQ(test->width, 0);
+    EXPECT_EQ(test->area, 0);
 }
 
-TEST(RectangleTest, RectangleHeightNone){
+TEST(ConstructorTest, NoInputPerimeter){
     Rectangle* test = new Rectangle();
-    EXPECT_EQ(test->height, 0);
+    EXPECT_EQ(test->perimeter, 0);
 }
 
-TEST(RectangleTest, RectangleWidthInt){
+TEST(PerimeterTest, IntInputPerimeter){
     Rectangle* test = new Rectangle(2, 8);
-    EXPECT_EQ(test->width, 2);
+    EXPECT_EQ(test->perimeter, 20);
 }
 
-TEST(RectangleTest, RectangleHeightInt){
-    Rectangle* test = new Rectangle(2, 8);
-    EXPECT_EQ(test->height, 8);
-}
-
-TEST(RectangleTest, RectangleAreaInt){
+TEST(testingArea, IntInputArea){
     Rectangle* test = new Rectangle(2, 8);
     EXPECT_EQ(test->area, 16);
 }
 
-TEST(RectangleTest, RectangleChangeWidth){
-    Rectangle* test = new Rectangle(4, 5);
-    set_width(7);
-    EXPECT_EQ(test->width, 7);
-}
-
-TEST(RectangleTest, RectangleChangeHeight){
-    Rectangle* test = new Rectangle(4, 5);
-    set_height(7);
-    EXPECT_EQ(test->height, 7);
-}
-
-TEST(RectangleTest, RectangleChangeArea){
-    Rectangle* test = new Rectangle(4, 5);
-    set_width(7);
-    EXPECT_EQ(test->area, 35);
+TEST(PerimeterTest, ZeroHeightPerimeter){
+    Rectangle* test = new Rectangle(2, 0);
+    EXPECT_EQ(test->perimeter, 4);
 }
 
 int main(int argc, char **argv) {
