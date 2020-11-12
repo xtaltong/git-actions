@@ -4,7 +4,7 @@ using namespace std;
 
 Rectangle::Rectangle() {
     set_width(0);
-    set_height(0);
+    set_height(2);
 }
 
 Rectangle::Rectangle(int w,int h) {
