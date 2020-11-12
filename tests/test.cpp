@@ -10,12 +10,12 @@ TEST(testingArea, AreaTestZeroWidth){
 
 TEST(ConstructorTest, NoInputArea){
     Rectangle* test = new Rectangle();
-    EXPECT_EQ(test->area, 0);
+    EXPECT_EQ(test->area(), 0);
 }
 
 TEST(ConstructorTest, NoInputPerimeter){
     Rectangle* test = new Rectangle();
-    EXPECT_EQ(test->perimeter, 0);
+    EXPECT_EQ(test->perimeter(), 0);
 }
 
 TEST(PerimeterTest, IntInputPerimeter){
@@ -25,7 +25,7 @@ TEST(PerimeterTest, IntInputPerimeter){
 
 TEST(testingArea, IntInputArea){
     Rectangle* test = new Rectangle(2, 8);
-    EXPECT_EQ(test->area, 16);
+    EXPECT_EQ(test->area(), 16);
 }
 
 TEST(PerimeterTest, ZeroHeightPerimeter){
